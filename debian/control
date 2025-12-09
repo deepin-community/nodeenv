@@ -1,15 +1,32 @@
-Source: template-repository
-Section: unknown
+Source: nodeenv
+Section: utils
 Priority: optional
-Maintainer: Tsic404 <liuheng@deepin.org>
-Build-Depends: debhelper (>= 11)
-Standards-Version: 4.1.3
-Homepage: https://github.com/deepin-community/template-repository
-#Vcs-Browser: https://salsa.debian.org/debian/deepin-community-template-repository
-#Vcs-Git: https://salsa.debian.org/debian/deepin-community-template-repository.git
+Maintainer: Debian Python Team <team+python@tracker.debian.org>
+Uploaders: Chris Kuehl <ckuehl@ocf.berkeley.edu>,
+Build-Depends: debhelper-compat (= 13),
+               dh-sequence-python3,
+               pybuild-plugin-pyproject,
+               python3-all,
+               python3-pytest <!nocheck>,
+Rules-Requires-Root: no
+Standards-Version: 4.7.0
+Vcs-Git: https://salsa.debian.org/python-team/packages/nodeenv.git
+Vcs-Browser: https://salsa.debian.org/python-team/packages/nodeenv
+Homepage: https://ekalinin.github.io/nodeenv/
 
-Package: template-repository
-Architecture: any
-Depends: ${shlibs:Depends}, ${misc:Depends}
-Description: <insert up to 60 chars description>
- <insert long description, indented with spaces>
+Package: nodeenv
+Architecture: all
+Depends:
+ ${misc:Depends},
+ ${python3:Depends},
+ make,
+ gcc (>= 4:4.9.1) | nodejs,
+ g++ (>= 4:4.9.1) | nodejs,
+ libssl-dev | nodejs,
+ python3 | nodejs
+Description: Node.js virtual environment builder
+ Tool to create isolated node.js environments with their own installation
+ directories that don't share libraries with other node.js virtual
+ environments, similar to a Python virtualenv.
+ .
+ These environments can be integrated with ones created by Python's virtualenv.

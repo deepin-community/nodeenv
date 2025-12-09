@@ -1,5 +1,49 @@
-template-repository (1.0-1) unstable; urgency=medium
+nodeenv (1.9.1-2) unstable; urgency=medium
 
-  * Initial release
+  * Team upload.
+  * Aslo remove python3-pkg-resources from runtime dependencies
 
- -- Tsic404 <liuheng@deepin.org>  Sat, 28 Jan 2023 13:46:49 +0800
+ -- Alexandre Detiste <tchet@debian.org>  Mon, 13 Jan 2025 21:23:01 +0100
+
+nodeenv (1.9.1-1) unstable; urgency=medium
+
+  * Team Upload
+  * New upstream version 1.9.1 (Closes: #1085742, #1084588)
+  * Load on Salsa
+  * Use DebHelper 13
+  * Set Rules-Requires-Root: no
+  * Update build-depencies:
+    - python3-pkg-resources (Closes: #1083508)
+    - python3-pkginfo
+    - python3-setuptools
+    + pybuild-plugin-pyproject
+    + python3-pytest
+
+ -- Alexandre Detiste <tchet@debian.org>  Mon, 11 Nov 2024 09:56:27 +0100
+
+nodeenv (0.13.4-1.1) unstable; urgency=medium
+
+  * Non-maintainer upload.
+  * Replace spurious python2.7 dependency with python3; Closes: #937150
+
+ -- Sandro Tosi <morph@debian.org>  Fri, 13 Mar 2020 22:05:05 -0400
+
+nodeenv (0.13.4-1) unstable; urgency=medium
+
+  * New upstream version
+  * Fix dependencies if the user chooses not to install the recommends.
+    (Closes: #795622)
+
+ -- Chris Kuehl <ckuehl@ocf.berkeley.edu>  Mon, 31 Aug 2015 12:18:09 -0700
+
+nodeenv (0.13.3-1) unstable; urgency=medium
+
+  * New upstream version
+
+ -- Chris Kuehl <ckuehl@ocf.berkeley.edu>  Sat, 25 Jul 2015 13:13:01 -0700
+
+nodeenv (0.13.2-1) unstable; urgency=medium
+
+  * Initial release. (Closes: #792010)
+
+ -- Chris Kuehl <ckuehl@ocf.berkeley.edu>  Sat, 04 Jul 2015 00:40:02 -0700

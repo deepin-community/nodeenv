@@ -1,4 +1,6 @@
 #!/usr/bin/make -f
+export PYBUILD_NAME=nodeenv
+export PYBUILD_TEST_ARGS=-k 'not test_smoke'
 
 %:
-	dh $@
+	dh $@ --buildsystem=pybuild
